@@ -29,7 +29,7 @@ const handleOptionChange= (_,result)=>{
       <Grid.Column style={{width : "300px"}}>
         <div className="ui pilled segment">
           <div className="ui pilled brand" >
-            <a href="...." className="design" target="_blank" rel="noreferrer noopener">
+            <a href="https://github.com/E-Ozdemir/FireContact-App.git" className="design" target="_blank" rel="noreferrer noopener">
               <code>{"<Özdmr/>"}</code>
               <span className="design header">design</span>
             </a>
