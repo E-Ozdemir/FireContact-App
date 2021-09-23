@@ -2,11 +2,9 @@ import {Grid,Segment,Button,Form, GridColumn, ButtonContent} from "semantic-ui-r
 import { options } from "../../utils/constants";
 
 
-const FormComponent = ({info,setInfo}) => {
+const FormComponent = ({info,setInfo,handleFormsubmit}) => {
 
-const handleSubmit = ()=>{
-  console.log('info :>> ', info);
-}
+
 
 const handleInputChange = (e)=>{
   // const name= e.target.name;
@@ -36,7 +34,7 @@ const handleOptionChange= (_,result)=>{
           </div>
         </div>
         <h2 className="contact-header">Add Contact</h2>
-        <Form size="large" onSubmit={handleSubmit}>
+        <Form size="large" onSubmit={handleFormsubmit}>
           <Segment stacked>
             <Form.Input  fluid name="username" icon='user' iconPosition='left' placeholder='Name' type="text" 
             value={info.username} 
@@ -56,7 +54,9 @@ const handleOptionChange= (_,result)=>{
               fluid
               selection
               required/>
-              <Button color="teal" fluid size="large" type="submit">Add</Button>
+              <Button color="teal" fluid size="large" type="submit">
+                {info.id ? 'Update' : 'Add'}
+              </Button>
           </Segment>
         </Form>
       </Grid.Column>
