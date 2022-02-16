@@ -5,7 +5,7 @@ import { successToastify } from "./customToasitfy";
 export const addInfo = (info)=> {
     const contactRef = firebase.database().ref("contact");
     contactRef.push(info);
-    successToastify('Added successfully')
+    successToastify('Added successfully to FireBase database')
 }
 
 export const useFetch = () => {
